@@ -3,8 +3,7 @@
 A modern and responsive digital agency landing page built using React and Tailwind CSS.
 
 ## Live Demo
-
-https://your-vercel-link.vercel.app
+(https://northpeak-digital-app.vercel.app/)
 
 ## GitHub Repository
 
