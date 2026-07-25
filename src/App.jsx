@@ -13,15 +13,17 @@ function App() {
   return (
     <div className="bg-slate-950 text-white">
       <Navbar />
-      <Hero />
-      <Stats />
-      <Services />
-      <WhyChooseUs />
-      <Testimonials />
-      <Pricing />
-      <FAQ />
-      <Contact />
-      <Footer />
+      <main>
+        <Hero />
+        <Stats />
+        <Services />
+        <WhyChooseUs />
+        <Testimonials />
+        <Pricing />
+        <FAQ />
+        <Contact />
+      </main>
+        <Footer />
     </div>
   );
 }

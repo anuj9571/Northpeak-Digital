@@ -6,7 +6,6 @@ function Hero() {
       id="home"
       className="relative min-h-screen bg-slate-950 overflow-hidden flex items-center"
     >
-    
       <div className="max-w-7xl mx-auto px-6 py-28 grid lg:grid-cols-2 gap-16 items-center relative z-10">
 
         {/* Left Content */}
@@ -21,7 +20,7 @@ function Hero() {
             </span>
           </h1>
 
-          <p className="mt-8 text-slate-400 text-lg leading-8 max-w-xl">
+          <p className="mt-8 text-slate-300 text-lg leading-8 max-w-xl">
             We design and develop premium websites that help
             businesses increase their online presence,
             generate more leads and grow faster.
@@ -29,12 +28,18 @@ function Hero() {
 
           <div className="mt-10 flex flex-wrap gap-5">
 
-            <button className="bg-blue-600 hover:bg-blue-700 px-7 py-4 rounded-xl text-white font-semibold flex items-center gap-3 transition">
+            <button
+              aria-label="Get Started"
+              className="bg-blue-600 hover:bg-blue-700 px-7 py-4 rounded-xl text-white font-semibold flex items-center gap-3 transition"
+            >
               Get Started
               <FaArrowRight />
             </button>
 
-            <button className="border border-slate-700 hover:border-blue-500 hover:text-blue-400 px-7 py-4 rounded-xl text-white flex items-center gap-3 transition">
+            <button
+              aria-label="Watch Demo"
+              className="border border-slate-700 hover:border-blue-500 hover:text-blue-400 px-7 py-4 rounded-xl text-white flex items-center gap-3 transition"
+            >
               <FaPlayCircle />
               Watch Demo
             </button>
@@ -48,7 +53,7 @@ function Hero() {
               <h2 className="text-3xl font-bold text-white">
                 120+
               </h2>
-              <p className="text-slate-400">
+              <p className="text-slate-300">
                 Projects
               </p>
             </div>
@@ -57,7 +62,7 @@ function Hero() {
               <h2 className="text-3xl font-bold text-white">
                 98%
               </h2>
-              <p className="text-slate-400">
+              <p className="text-slate-300">
                 Satisfaction
               </p>
             </div>
@@ -66,7 +71,7 @@ function Hero() {
               <h2 className="text-3xl font-bold text-white">
                 24/7
               </h2>
-              <p className="text-slate-400">
+              <p className="text-slate-300">
                 Support
               </p>
             </div>

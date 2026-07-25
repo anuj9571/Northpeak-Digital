@@ -1,9 +1,5 @@
 import { useState } from "react";
-import {
-  FaMapMarkerAlt,
-  FaEnvelope,
-  FaPhoneAlt,
-} from "react-icons/fa";
+import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
 function Contact() {
   const [form, setForm] = useState({
@@ -56,14 +52,9 @@ function Contact() {
   };
 
   return (
-    <section
-      id="contact"
-      className="bg-slate-950 py-24"
-    >
+    <section id="contact" className="bg-slate-950 py-24">
       <div className="max-w-7xl mx-auto px-6">
-
         <div className="text-center mb-16">
-
           <p className="text-blue-500 uppercase tracking-widest font-semibold">
             CONTACT
           </p>
@@ -75,15 +66,12 @@ function Contact() {
           <p className="text-slate-400 mt-4">
             We'd love to hear about your next project.
           </p>
-
         </div>
 
         <div className="grid lg:grid-cols-2 gap-10">
-
           {/* Left */}
 
           <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8">
-
             <h3 className="text-3xl text-white font-bold">
               Contact Information
             </h3>
@@ -93,63 +81,42 @@ function Contact() {
             </p>
 
             <div className="space-y-8 mt-10">
-
               <div className="flex gap-5">
-
                 <div className="w-14 h-14 rounded-xl bg-blue-600/20 flex justify-center items-center text-blue-500">
                   <FaMapMarkerAlt />
                 </div>
 
                 <div>
-                  <h4 className="text-white font-semibold">
-                    Address
-                  </h4>
+                  <h4 className="text-white font-semibold">Address</h4>
 
-                  <p className="text-slate-400">
-                    New Delhi, India
-                  </p>
+                  <p className="text-slate-400">New Delhi, India</p>
                 </div>
-
               </div>
 
               <div className="flex gap-5">
-
                 <div className="w-14 h-14 rounded-xl bg-blue-600/20 flex justify-center items-center text-blue-500">
                   <FaEnvelope />
                 </div>
 
                 <div>
-                  <h4 className="text-white font-semibold">
-                    Email
-                  </h4>
+                  <h4 className="text-white font-semibold">Email</h4>
 
-                  <p className="text-slate-400">
-                    hello@northpeak.com
-                  </p>
+                  <p className="text-slate-400">hello@northpeak.com</p>
                 </div>
-
               </div>
 
               <div className="flex gap-5">
-
                 <div className="w-14 h-14 rounded-xl bg-blue-600/20 flex justify-center items-center text-blue-500">
                   <FaPhoneAlt />
                 </div>
 
                 <div>
-                  <h4 className="text-white font-semibold">
-                    Phone
-                  </h4>
+                  <h4 className="text-white font-semibold">Phone</h4>
 
-                  <p className="text-slate-400">
-                    +91 98765 43210
-                  </p>
+                  <p className="text-slate-400">+91 98765 43210</p>
                 </div>
-
               </div>
-
             </div>
-
           </div>
 
           {/* Right */}
@@ -158,21 +125,12 @@ function Contact() {
             onSubmit={handleSubmit}
             className="bg-slate-900 border border-slate-800 rounded-3xl p-8"
           >
+            <label htmlFor="email" className="sr-only">
+              Your Email
+            </label>
 
             <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={form.name}
-              onChange={handleChange}
-              className="w-full bg-slate-950 border border-slate-700 rounded-xl p-4 text-white outline-none mb-2"
-            />
-
-            <p className="text-red-400 text-sm mb-4">
-              {errors.name}
-            </p>
-
-            <input
+              id="email"
               type="email"
               name="email"
               placeholder="Your Email"
@@ -181,11 +139,14 @@ function Contact() {
               className="w-full bg-slate-950 border border-slate-700 rounded-xl p-4 text-white outline-none mb-2"
             />
 
-            <p className="text-red-400 text-sm mb-4">
-              {errors.email}
-            </p>
+            <p className="text-red-400 text-sm mb-4">{errors.email}</p>
+
+            <label htmlFor="message" className="sr-only">
+              Your Message
+            </label>
 
             <textarea
+              id="message"
               rows="6"
               name="message"
               placeholder="Your Message"
@@ -194,18 +155,17 @@ function Contact() {
               className="w-full bg-slate-950 border border-slate-700 rounded-xl p-4 text-white outline-none mb-2"
             />
 
-            <p className="text-red-400 text-sm mb-6">
-              {errors.message}
-            </p>
+            <p className="text-red-400 text-sm mb-6">{errors.message}</p>
 
-            <button className="w-full bg-blue-600 hover:bg-blue-700 transition py-4 rounded-xl text-white font-semibold">
+            <button
+              type="submit"
+              aria-label="Send Contact Form"
+              className="w-full bg-blue-600 hover:bg-blue-700 transition py-4 rounded-xl text-white font-semibold"
+            >
               Send Message
             </button>
-
           </form>
-
         </div>
-
       </div>
     </section>
   );

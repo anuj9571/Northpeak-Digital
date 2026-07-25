@@ -1,6 +1,6 @@
 import { useState } from "react";
 import logo from "../assets/logo.jpg";
-import { FaBars, FaTimes, FaCode } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,8 +15,13 @@ function Navbar() {
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-slate-900 border-b border-slate-800">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-3">
+        <a
+          href="#home"
+          aria-label="Go to Home"
+          className="flex items-center gap-3"
+        >
           <div className="w-11 h-11 rounded-xl overflow-hidden shadow-lg shadow-blue-600/30">
             <img
               src={logo}
@@ -58,6 +63,9 @@ function Navbar() {
         <button
           className="md:hidden text-white"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
         >
           {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
@@ -65,7 +73,10 @@ function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-slate-900 border-t border-slate-800">
+        <div
+          id="mobile-menu"
+          className="md:hidden bg-slate-900 border-t border-slate-800"
+        >
           {links.map((item) => (
             <a
               key={item.name}
